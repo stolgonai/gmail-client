@@ -11,6 +11,14 @@ $text-color: grey;
 $breakpoint-tablet: 768px;
 $breakpoint-2: 960px;
 
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -24,6 +32,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
 
   .header-icon {
     max-width: 20px;
@@ -151,6 +161,8 @@ header {
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
 
       img {
         height: 20px;
@@ -159,6 +171,15 @@ header {
       }
     }
   }
+}
+
+.left-tag:hover {
+  background-color: rgb(168, 162, 171);
+}
+
+.inbox {
+  background-color: #FCE8E6;
+  color: #DC3C31;
 }
 
 /* meet */
@@ -188,11 +209,19 @@ header {
 /* hangouts */
 .hangouts {
 
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px groove lightgray;
+  padding-left: 15px;
+
+
   /* border: 1px solid; */
   .hangout-user {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     div:first-child {
       display: flex;
@@ -209,7 +238,7 @@ header {
 
 /* main */
 main {
-  // float: right;
+  float: right;
   width: 84%;
   height: calc(100vh - 100px);
   margin: 10px 10px 10px 0px;
