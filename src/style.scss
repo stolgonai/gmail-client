@@ -17,7 +17,6 @@ $breakpoint-2: 960px;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  box-sizing: border-box;
 }
 
 body {
@@ -33,9 +32,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // margin-top: 15px;
-  // margin-bottom: 15px;
-  height: 100px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 
   .header-icon {
     max-width: 20px;
@@ -125,16 +123,10 @@ header {
 
 /* sidebar */
 .sidebar {
-  // float: left;
-  width: 200px;
   float: left;
   width: 14%;
   /* border: 1px solid; */
   padding: 10px;
-  border: 1px solid red;
-  position: fixed;
-  height: calc(100vh - 100px)
-}
 
   .compose {
     box-shadow: 0 0 1px 1px lightgray;
@@ -180,6 +172,7 @@ header {
     }
   }
 }
+
 .left-tag:hover {
   background-color: rgb(168, 162, 171);
 }
@@ -242,21 +235,9 @@ header {
     margin-right: 5px;
   }
 }
-.main-container {
-  margin-left: 200px;
-  overflow: scroll;
-  height: calc(100vh - 100px); // 100vh (device height) - 100px (header height)
-}
 
 /* main */
 main {
-  // float: right;
-  // width: 84%;
-  border: 1px solid lightgray;
-  // height: calc(100vh - 100px);
-  // margin: 10px 10px 10px 0px;
-  // margin-left: 14%;
-
   float: right;
   width: 84%;
   height: calc(100vh - 100px);
@@ -508,56 +489,3 @@ main {
   margin-top: 100px;
   color: black;
 }
-
-footer{
-  // line-height: 20px;
-  letter-spacing: .3px;
-  // clear: both;
-  color: #5f6368;
-  display: flex;
-  border: 1px solid;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-  font-size: .75rem;
-  // margin-left: 14%;
-  a {
-    text-decoration: none;
-    color:  #5f6368;
-   }
-
-  a:hover{
-    text-decoration: underline;
-  }
-}
-
-// .footer-left, .footer-middle, .footer-right {
-//   float: left;
-// }
-
-// .footer-left {
-//   // text-align: left;
-// }
-
-.footer-middle{
-  align-self:flex-start;
-}
-
-.footer-left{
-  margin-left: 10px;
-}
-
-.footer-right{
-  margin-right: 10px;
-}
-
-@media (max-width: 760px) {
-  //  ipads and phones
-  .sidebar {
-    width: 100%;
-    position: none;
-  }
-}
-

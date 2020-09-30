@@ -4,8 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  box-sizing: border-box; }
+  font-family: 'Montserrat', sans-serif; }
 
 body {
   padding: 0;
@@ -18,7 +17,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px; }
+  margin-top: 15px;
+  margin-bottom: 15px; }
   header .header-icon {
     max-width: 20px;
     max-height: 20px; }
@@ -85,44 +85,6 @@ header {
 
 /* sidebar */
 .sidebar {
-  width: 200px;
-  padding: 10px;
-  border: 1px solid red;
-  position: fixed;
-  height: calc(100vh - 100px); }
-
-.compose {
-  box-shadow: 0 0 1px 1px lightgray;
-  width: 140px;
-  align-items: center;
-  justify-content: space-evenly;
-  display: flex;
-  border-radius: 30px;
-  padding: 10px;
-  user-select: none;
-  margin-bottom: 15px;
-  transition: linear 0.2s; }
-  .compose:hover {
-    box-shadow: 1px 3px 5px 2px lightgray; }
-  .compose img {
-    width: 30px;
-    height: 30px; }
-
-.menu {
-  min-height: 300px;
-  overflow-y: auto; }
-  .menu .left-tag {
-    padding: 5px;
-    padding-left: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px; }
-    .menu .left-tag img {
-      height: 20px;
-      width: 20px;
-      margin-right: 15px; }
   float: left;
   width: 14%;
   /* border: 1px solid; */
@@ -205,14 +167,8 @@ header {
     width: auto;
     margin-right: 5px; }
 
-.main-container {
-  margin-left: 200px;
-  overflow: scroll;
-  height: calc(100vh - 100px); }
-
 /* main */
 main {
-  border: 1px solid lightgray; }
   float: right;
   width: 84%;
   height: calc(100vh - 100px);
@@ -374,40 +330,6 @@ main {
 
 .list-emails:hover .email-date {
   display: none; }
-
-.mail-list-wrapper {
-  padding: 0 20px; }
-
-footer {
-  letter-spacing: .3px;
-  color: #5f6368;
-  display: flex;
-  border: 1px solid;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-  font-size: .75rem; }
-  footer a {
-    text-decoration: none;
-    color: #5f6368; }
-  footer a:hover {
-    text-decoration: underline; }
-
-.footer-middle {
-  align-self: flex-start; }
-
-.footer-left {
-  margin-left: 10px; }
-
-.footer-right {
-  margin-right: 10px; }
-
-@media (max-width: 760px) {
-  .sidebar {
-    width: 100%;
-    position: none; } }
 
 .right-archive-div, .right-delete-div, .right-mark-div, .right-snooze-div {
   display: none;
