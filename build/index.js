@@ -106,6 +106,37 @@ function big_bang(onePage, category) {
     });
     mainLoop();
 
+    // typecheck
+    var searchVal = document.getElementById("search");
+    searchVal.oninput = function () {
+      //  console.log(searchVal.value);
+      var filteredGmails = filterByValue(searchVal.value).slice(0, 5);
+      console.log(filteredGmails);
+      // renderValueList(filteredGmails);
+    };
+
+    function filterByValue(val) {
+      val = val.toLowerCase();
+      return state.gmails.filter(function (gmail) {
+        for (var key in gmail) {
+          if (typeof gmail[key] === "string" && gmail[key].toLowerCase().includes(val)) {
+            return true;
+          }
+        }
+        return false;
+      });
+    }
+
+    // function renderValueList(result){
+    //   const ul = documnet.querySelector("searchEmail")
+    //   let envelopeIcon = document.createElement('img');
+
+
+    //   let list = document.createElement("li")
+    //   list.classList.add("oneEmail");
+
+    // }
+
     // looping each eamil
     function mainLoop() {
       for (var index = 0; index < state.gmails.length; index++) {

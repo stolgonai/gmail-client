@@ -80,23 +80,6 @@ function big_bang(onePage , category) {
       }
     })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     console.log(state.page_info)
 
     const ul = document.querySelector('.mail-list-wrapper')
@@ -129,7 +112,42 @@ function big_bang(onePage , category) {
       }
     })
     mainLoop();
+ 
 
+    // typecheck
+    const searchVal = document.getElementById("search")
+    searchVal.oninput = function () {
+          //  console.log(searchVal.value);
+      const filteredGmails = filterByValue(searchVal.value).slice(0, 5);
+      console.log(filteredGmails)
+      // renderValueList(filteredGmails);
+    };
+
+    function filterByValue(val) {
+      val = val.toLowerCase();
+      return state.gmails.filter((gmail) => {
+        for (const key in gmail) {
+          if (
+            typeof gmail[key] === "string" &&
+            gmail[key].toLowerCase().includes(val)
+          ) {
+            return true;
+          }
+        }
+        return false;
+      });
+    }
+    
+          
+    function renderValueList(result){
+      const ul = documnet.querySelector("searchEmail")
+      let envelopeIcon = document.createElement('img');
+
+
+      let list = document.createElement("li")
+      list.classList.add("oneEmail");
+
+    }
 
     // looping each eamil
     function mainLoop() {
@@ -152,6 +170,7 @@ function big_bang(onePage , category) {
     }
   });
 }
+
 
 
 function prepare_element(category, index, name, title, date, email, message) {
